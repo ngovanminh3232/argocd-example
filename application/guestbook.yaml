@@ -4,7 +4,7 @@ metadata:
   name: guestbook
   namespace: ac-test
 spec:
-  project: aka247-fci
+  project: ac-test
   source:
     repoURL: "https://github.com/ngovanminh3232/argocd-example.git"
     targetRevision: master
