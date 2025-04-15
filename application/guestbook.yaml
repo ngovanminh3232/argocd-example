@@ -10,6 +10,6 @@ spec:
     targetRevision: master
     path: guestbook/
   destination:
-    server: "https://api.ouyl8mxw.prd.m.fke.fptcloud.com"
+    server: "https://api.ouyl8mxw.prd.m.fke.fptcloud.com:6443"
     namespace: ac-test
   syncPolicy: {}
