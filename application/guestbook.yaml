@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook
+  namespace: ac-test
+spec:
+  project: aka247-fci
+  source:
+    repoURL: "https://github.com/ngovanminh3232/argocd-example.git"
+    targetRevision: master
+    path: guestbook/
+  destination:
+    server: "https://api.ouyl8mxw.prd.m.fke.fptcloud.com"
+    namespace: ac-test
+  syncPolicy: {}
