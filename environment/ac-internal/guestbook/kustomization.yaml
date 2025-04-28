@@ -5,7 +5,16 @@ replicas:
     count: 2
 
 images:
-  - name: quay.io/minhnv82/guestbook
+  - name: ac-registry-ac-internal.dev.cluster02.fis-cloud.xplat.online/argocd/guestbook
     newTag: v1
+
+patches:
+  - target:
+      kind: Deployment
+    patch: |-
+      - op: add
+        path: /spec/template/spec/imagePullSecrets
+        value: [{ name: private-registry }]
+
 resources:
   - ../../../guestbook
