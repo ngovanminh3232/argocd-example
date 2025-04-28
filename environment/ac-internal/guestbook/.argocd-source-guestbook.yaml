@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - quay.io/minhnv82/guestbook:v1@sha256:deb96cdc2b490bb5dabace3834829922afd87e3a31d5a39748f22713b21aabc9
