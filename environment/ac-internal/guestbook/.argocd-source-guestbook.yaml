@@ -1,3 +1,4 @@
 kustomize:
   images:
   - quay.io/minhnv82/guestbook:v1@sha256:deb96cdc2b490bb5dabace3834829922afd87e3a31d5a39748f22713b21aabc9
+  - ac-registry-ac-internal.dev.cluster02.fis-cloud.xplat.online/argocd/guestbook:v1@sha256:d4777e5bfffde748e2e3339fd6aa0ea964249c5d2d0c005303c5f85755bc306c
