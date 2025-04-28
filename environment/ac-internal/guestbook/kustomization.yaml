@@ -1,0 +1,11 @@
+---
+namespace: ac-internal
+replicas:
+  - name: guestbook-ui
+    count: 2
+
+images:
+  - name: quay.io/minhnv82/guestbook
+    newTag: v1
+resources:
+  - ../../../guestbook

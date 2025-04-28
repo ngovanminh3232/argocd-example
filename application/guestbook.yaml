@@ -2,14 +2,21 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: guestbook
-  namespace: ac-test
+  namespace: ac-internal
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: guestbook=quay.io/minhnv82/guestbook:~v1
+    argocd-image-updater.argoproj.io/guestbook.update-strategy: latest
+    argocd-image-updater.argoproj.io/pull-policy: "Always"
 spec:
-  project: ac-test
+  project: default
   source:
     repoURL: "https://github.com/ngovanminh3232/argocd-example.git"
     targetRevision: master
-    path: guestbook/
+    path: environment/ac-internal/guestbook/
   destination:
-    server: "https://api.ouyl8mxw.prd.m.fke.fptcloud.com:6443"
-    namespace: ac-test
-  syncPolicy: {}
+    server: "https://kubernetes.default.svc"
+    namespace: ac-internal
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
