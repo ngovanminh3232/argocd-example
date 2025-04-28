@@ -16,6 +16,6 @@ data:
       prefix: ac-registry-ac-internal
       ping: yes
       default: true
-      api_url: https://ac-registry-ac-internal.dev.cluster02.fis-cloud.xplat.online
+      api_url: https://ac-registry-ui-ac-internal.dev.cluster02.fis-cloud.xplat.online
       credentials: pullsecret:ac-internal/private-registry
 binaryData: {}
