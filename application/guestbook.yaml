@@ -4,7 +4,7 @@ metadata:
   name: guestbook
   namespace: ac-internal
   annotations:
-    argocd-image-updater.argoproj.io/image-list: guestbook=quay.io/minhnv82/guestbook:v1
+    argocd-image-updater.argoproj.io/image-list: guestbook=ac-registry-ac-internal.dev.cluster02.fis-cloud.xplat.online/argocd/guestbook:v1
     argocd-image-updater.argoproj.io/guestbook.update-strategy: digest
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/pull-policy: "Always"
