@@ -21,12 +21,13 @@ spec:
       parameters:
         - name: "replicaCount"
           value: "2"
-        - name: imagePullSecrets[0].name
-          value: private-registry
         - name: "image.repository"
           value: "ac-registry-ac-internal.dev.cluster02.fis-cloud.xplat.online/argocd/nginx-122"
         - name: "image.tag"
           value: v1
+      values: |
+        imagePullSecrets:
+          - name: private-registry
   destination:
     server: https://kubernetes.default.svc
     namespace: ac-internal
