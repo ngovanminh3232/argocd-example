@@ -20,7 +20,7 @@ spec:
     helm:
       parameters:
         - name: "replicaCount"
-          value: "2"
+          value: "1"
         - name: "image.repository"
           value: "ac-registry-ac-internal.dev.cluster02.fis-cloud.xplat.online/argocd/nginx-122"
         - name: "image.tag"
