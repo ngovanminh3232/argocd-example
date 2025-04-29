@@ -1,0 +1,14 @@
+helm:
+  parameters:
+  - name: replicaCount
+    value: "2"
+    forcestring: false
+  - name: image.repository
+    value: ac-registry-ac-internal.dev.cluster02.fis-cloud.xplat.online/argocd/nginx-122
+    forcestring: false
+  - name: image.tag
+    value: v1@sha256:5c1aa53f592669f6fc2106957e02fce5e8d279c371121003e785fed3480b9708
+    forcestring: true
+  - name: image.name
+    value: ac-registry-ac-internal.dev.cluster02.fis-cloud.xplat.online/argocd/nginx-122
+    forcestring: true
