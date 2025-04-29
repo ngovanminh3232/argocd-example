@@ -21,8 +21,10 @@ spec:
       parameters:
         - name: "replicaCount"
           value: "2"
+        - name: imagePullSecrets
+          value: "private-registry"
         - name: "image.repository"
-          value: ac-registry-ac-internal.dev.cluster02.fis-cloud.xplat.online/argocd/nginx-122
+          value: "ac-registry-ac-internal.dev.cluster02.fis-cloud.xplat.online/argocd/nginx-122"
         - name: "image.tag"
           value: v1
   destination:
